@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abdullah Al Mamun - Biodata</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #effbfd, #e5fcff); /* Light pastel gradient */
+            color: #333;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        section {
+            padding: 40px 20px;
+            margin: 15px auto; /* Reduced gap between cards */
+            background: #ffffff;
+            color: #333;
+            border-radius: 8px;
+            max-width: 900px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            opacity: 0;
+            transform: translateY(50px);
+            transition: transform 0.5s ease, opacity 0.5s ease;
+        }
+
+        section.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #4CAF50;
+            margin-bottom: 20px;
+            text-align: center;
+            border-bottom: 2px solid #4CAF50;
+            padding-bottom: 10px;
+        }
+
+        .content p {
+            font-size: 1.125rem;
+            margin-bottom: 15px;
+        }
+
+        .content a {
+            color: #4CAF50;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .content a:hover {
+            color: #388E3C;
+        }
+
+        footer {
+            background-color: #ffffff;
+            color: #333;
+            padding: 20px;
+            text-align: center;
+            border-top: 2px solid #D1D5DB;
+        }
+
+        footer a {
+            color: #4CAF50;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        footer a:hover {
+            color: #388E3C;
+        }
+
+        /* Card with GIF background for Biodata */
+        .biodata-card {
+            width: 80% auto; /* Adjust the width to make it smaller */
+            margin: 20px auto; /* Center the card */
+            padding: 40px;
+            background: url('mygif.gif') no-repeat center center; /* Local file */
+            background-size: cover;
+            color: white;
+            text-align: center;
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            opacity: 1; /* Set opacity to 1 to make it visible */
+            transform: translateY(0); /* Ensure it's in place */
+            transition: transform 0.5s ease, opacity 0.5s ease;
+        }
+
+        .biodata-card .section-title {
+            font-size: 2rem;
+            font-weight: 600;
+            color: #fff;
+            margin-bottom: 0px;
+            text-align: center;
+            padding-bottom: 0px;
+            border-bottom: none; /* Remove the underline */
+        }
+
+        .biodata-card .sub-title {
+            font-size: 1.25rem; /* Make it smaller than the section title */
+            color: #fff; /* White color to match the background */
+            margin-top: 0px; /* Add some space between the title and subtitle */
+            font-weight: 400; /* Light font weight */
+            text-align: center; /* Center the text */
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .section-title {
+                font-size: 1.5rem;
+            }
+
+            .content p {
+                font-size: 1rem;
+            }
+
+            .images {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .images img {
+                max-width: 80%;
+                margin-bottom: 20px;
+            }
+        }
+
+        .images {
+            display: flex;
+            justify-content: space-around;
+            gap: 20px;
+        }
+
+        .images img {
+            max-width: 100px;
+            cursor: pointer;
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+        }
+
+        .images img:hover {
+            transform: scale(1.05);
+        }
+
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modal img {
+            max-width: 90%;
+            max-height: 80%;
+        }
+
+        .close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            color: #fff;
+            font-size: 30px;
+            cursor: pointer;
+            background-color: rgba(0, 0, 0, 0.5);
+            border: none;
+            border-radius: 50%;
+            padding: 10px;
+        }
+
+    </style>
+</head>
+<body>
+
+<!-- Biodata Card -->
+<section id="biodata-info" class="biodata-card">
+    <div class="section-title">Biodata</div>
+    <div class="sub-title">Abdullah Al Mamun</div> <!-- Added smaller text -->
+</section>
+
+<!-- Other Sections (remain the same as before) -->
+
+<section id="personal-info" class="section">
+    <div class="section-title">Personal Information</div>
+    <div class="content">
+        <p><strong>Name:</strong> Abdullah Al Mamun</p>
+        <p><strong>Age:</strong> 27 years</p>
+        <p><strong>Date of Birth:</strong> 07/08/1998</p>
+        <p><strong>Height:</strong> 5'6"</p>
+        <p><strong>Religion:</strong> Islam</p>
+        <p><strong>Address:</strong> Village: Raninagar, PO: Sherkole, Thana: Singra, District: Natore </p>
+        <p><strong>Email:</strong> <a href="mailto:abdullah.aust177@gmail.com">abdullah.aust177@gmail.com</a></p>
+        <p><strong>Phone:</strong> <a href="tel:+8801784917724">01784-917724</a></p> <!-- Clickable phone number -->
+    </div>
+</section>
+
+<section id="family-info" class="section">
+    <div class="section-title">Family Details</div>
+    <div class="content">
+        <p><strong>Father's Occupation:</strong> Businessman & Farmer as well</p>
+        <p><strong>Mother's Occupation:</strong> Housewife</p>
+        <p><strong>Siblings:</strong> 1 Elder Sister</p>
+        <p><strong>Siblings Details:</strong> Mst Asha Khatun (BSc in EEE from UAP, Currently pursuing MSc from Germany)</p>
+    </div>
+</section>
+
+<section id="education-info" class="section">
+    <div class="section-title">Educational Background</div>
+    <div class="content">
+        <p><strong>School:</strong> Sherkole Samjan Ali High School (2014)</p>
+        <p><strong>College:</strong> Nawab Siraj-Ud-Dowla Government College, Natore (2016)</p>
+        <p><strong>University:</strong> Ahsanullah University of Science and Technology, BSc in EEE (2022)</p>
+    </div>
+</section>
+
+<section id="professional-info" class="section">
+    <div class="section-title">Professional Background</div>
+    <div class="content">
+        <p><strong>Current Profession:</strong> Assistant Engineer</p>
+        <p><strong>Company:</strong> Northern Electricity Supply PLC (NESCO)</p>
+        <p><strong>Experience:</strong> 1 Year+</p>
+    </div>
+</section>
+
+<section id="hobbies-info" class="section">
+    <div class="section-title">About Me</div>
+    <div class="content">
+        <p>I’m a very friendly and outgoing person who loves to connect with people. 
+            I’m not extremely pious, but I’m trying to focus more on that side of life nowadays. 
+            I hang out with my friends a lot and really enjoy spending time in nature and open spaces. 
+            I’m not much of a reader, but I love watching movies whenever I get some free time. 
+            I don’t really think much about how long I’ll live — I believe life is short, 
+            so I try to enjoy every moment of it. I love living in the moment and making the most of the time I have. 
+            I also have a strong desire to travel and explore new places. I want my life to be full of adventure. 
+            I have a few close friends and well-wishers, and with them and my family, 
+            I just want to spend the rest of my life happily.
+        </p>
+    </div>
+</section>
+
+<section id="expectations-info" class="section">
+    <div class="section-title">Marriage Expectations</div>
+    <div class="content">
+        <p>Describe what you're looking for in a partner, your values, and your future aspirations.</p>
+    </div>
+</section>
+
+<section id="contact-info" class="section">
+    <div class="section-title">Contact Information</div>
+    <div class="content">
+        <p><strong>Email:</strong> <a href="mailto:abdullah.aust177@gmail.com">abdullah.aust177@gmail.com</a></p>
+        <p><strong>Phone:</strong> <a href="tel:+8801784917724">01784-917724</a></p> <!-- Clickable phone number -->
+        <p><strong>Social Media:</strong> 
+            <a href="https://www.linkedin.com/in/yourlinkedin" target="_blank">LinkedIn</a> | 
+            <a href="https://www.instagram.com/yourinstagram" target="_blank">Instagram</a> | 
+            <a href="https://wa.me/+8801784917724" target="_blank">WhatsApp</a> | <!-- Clickable WhatsApp -->
+            <a href="https://www.facebook.com/yourfacebook" target="_blank">Facebook</a> <!-- Clickable Facebook -->
+        </p>
+    </div>
+</section>
+
+<!-- Images Section -->
+<section id="images-info" class="section">
+    <div class="section-title">Images</div>
+    <div class="images">
+        <img src="ph1.jpeg" alt="Image 1" onclick="openModal('ph1.jpeg')">
+        <img src="ph3.jpeg" alt="Image 3" onclick="openModal('ph3.jpeg')">
+        <img src="ph2.jpeg" alt="Image 2" onclick="openModal('ph2.jpeg')">
+        <img src="ph4.jpeg" alt="Image 4" onclick="openModal('ph4.jpeg')">
+        <img src="ph6.jpeg" alt="Image 6" onclick="openModal('ph6.jpeg')">
+
+    </div>
+</section>
+
+<!-- Modal for Image Popup -->
+<div id="imageModal" class="modal">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <img id="modalImage" src="" alt="Image Popup">
+</div>
+
+<footer>
+    <p>&copy; 2025 Abdullah Al Mamun - All Rights Reserved</p>
+    <p>For more information, contact via <a href="mailto:abdullah.aust177@gmail.com">email</a></p>
+</footer>
+
+<script>
+    // Intersection Observer for triggering animations
+    const sections = document.querySelectorAll('.section');
+
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('show');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.5 });
+
+    sections.forEach(section => {
+        observer.observe(section);
+    });
+
+    // Open the modal and display the image
+    function openModal(imageSrc) {
+        const modal = document.getElementById('imageModal');
+        const modalImage = document.getElementById('modalImage');
+        modal.style.display = "flex";
+        modalImage.src = imageSrc;
+    }
+
+    // Close the modal
+    function closeModal() {
+        const modal = document.getElementById('imageModal');
+        modal.style.display = "none";
+    }
+</script>
+
+</body>
+</html>
